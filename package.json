@@ -7,9 +7,13 @@
     "google-maps-react": "^1.1.2",
     "mdbreact": "^4.1.0",
     "react": "^16.2.0",
+    "react-addons": "^0.9.1-deprecated",
+    "react-controllables": "^0.6.0",
     "react-dom": "^16.2.0",
     "react-google-maps": "^9.4.5",
+    "react-pure-render": "^1.0.2",
     "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
     "semantic-ui-css": "^2.2.14",
     "semantic-ui-react": "^0.78.2"
