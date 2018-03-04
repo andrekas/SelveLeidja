@@ -27,3 +27,22 @@ body{
 #PriceDiv, #LocationsDiv, #CommentDiv{
     margin: 3%;
 }
+.hidden{
+    display: none;
+}
+.unhidden{
+    display: inline;
+}
+a:link{
+    text-decoration: none;
+    color: #686868;
+}
+a:visited{
+    color: #ABABAB;
+}
+a:hover{
+    color: #F97979;
+}
+#CommentInput{
+    width: 20%;
+}
