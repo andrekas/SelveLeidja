@@ -1,0 +1,29 @@
+body{
+    background-color: #F3F2F2;
+}
+#ContainerDiv{
+     width: 100%;
+     margin: 0 auto;
+}
+#DetailDiv, #ButtonsDiv{
+    float: left;
+    height: 100%;
+}
+#DetailDiv{
+    width: 75%;
+    text-align: center;
+    hight: 90%;
+}
+#ButtonsDiv{
+    width: 25%;
+    text-align: center;
+    hight: 90%;
+    border-right: 2px solid black;
+}
+#HeadingDiv{
+    text-align: center;
+    margin: 4%;
+}
+#PriceDiv, #LocationsDiv, #CommentDiv{
+    margin: 3%;
+}
