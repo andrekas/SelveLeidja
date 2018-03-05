@@ -12,12 +12,12 @@ body{
 #DetailDiv{
     width: 75%;
     text-align: center;
-    hight: 90%;
+    height: 90%;
 }
 #ButtonsDiv{
     width: 25%;
     text-align: center;
-    hight: 90%;
+    height: 90%;
     border-right: 2px solid black;
 }
 #HeadingDiv{

@@ -4,7 +4,7 @@ import { Menu, Segment } from 'semantic-ui-react'
 import './App.css';
 import {BrowserRouter, Link, Route} from "react-router-dom";
 import Pesulad from "./pesulad";
-import MapContainer from "./App";
+import Container from "./Container";
 import Contact from "./meist";
 
 
@@ -33,7 +33,7 @@ export class MenuExampleInvertedSecondary extends Component {
                 </Menu>
             </Segment>
                 <div className="content">
-                    <Route exact path="/" component={MapContainer}/>
+                    <Route exact path="/" component={Container}/>
                     <Route path="/pesulad" component={Pesulad}/>
                     <Route path="/meist" component={Contact}/>
                 </div>

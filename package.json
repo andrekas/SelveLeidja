@@ -7,6 +7,7 @@
     "google-map-react": "^0.31.0",
     "google-maps-react": "^1.1.2",
     "mdbreact": "^4.1.0",
+    "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-addons": "^0.9.1-deprecated",
     "react-controllables": "^0.6.0",

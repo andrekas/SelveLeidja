@@ -1,34 +1,96 @@
-import React, { Component, } from 'react';
-import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
+import React, {Children} from 'react';
+import ReactDOM from 'react-dom';
+import {PropTypes} from 'prop-types';
 
-export class MapContainer extends Component {
-    render() {
+
+
+export class Map extends React.Component {
+    renderChildren() {
+        const {children} = this.props;
+
+        if (!children) return;
+        return Children.map(children, c => {
+            return React.cloneElement(c, {
+                map: this.map,
+                google: this.props.google,
+                //mapCenter: this.state.currentLocation
+            });
+        })
+    }
+    componentDidMount(){
+        this.loadMap();
+        this.forceUpdate();
+    }
+
+    componentDidUpdate(prevProps, prevState){
+        if(prevProps.google !== this.props.google){
+            console.log('updating props');
+            this.loadMap();
+        }
+    }
+
+    loadMap(){
+        if(this.props && this.props.google){
+            const {google} = this.props;
+            const maps = google.maps;
+
+            const mapRef = this.refs.map;
+            const node = ReactDOM.findDOMNode(mapRef);
+
+            let {initialCenter, zoom} = this.props;
+            const {lat, lng} = initialCenter;
+            const center = new maps.LatLng(lat, lng);
+            const mapConfig = {
+                center: center,
+                zoom: zoom
+            };
+
+            this.map = new maps.Map(node, mapConfig);
+
+            this.forceUpdate();
+            console.log(this.map);
+
+    }
+    }
+
+    render(){
         const style = {
-            width: '95%',
-            height: '80%',
+            width: '98vw',
+            height: '85vh'
         };
-
         return (
-            <Map google={window.google} zoom={12} style={style} initialCenter={{lat: 59.436962, lng: 24.753574}}  onClick={this.onMapClicked}>
-                <Marker
-
-                    //cursor={"logo.png"}
-                    icon={{url: "../src/logo.png"}}
-                    title={'The marker`s title will appear as a tooltip.'}
-                    name={'SOMA'}
-                    position={{lat: 59.436962, lng: 24.753574}} />
-                <Marker onClick={this.onMarkerClick}
-                        name={'Current location'} />
-
-
-            </Map>
-
+            <div style={style} ref="map" >
+                Loading...
+                {this.renderChildren()}
+            </div>
         );
     }
+
+
 }
+Map.propTypes = {
+    google: PropTypes.object,
+    zoom: PropTypes.number,
+    initialCenter: PropTypes.object,
+    onMove: PropTypes.func
+};
+Map.defaultProps = {
+    onMove: function() {}, // default prop
+    zoom: 12,
+    initialCenter: {
+        lat: 59.436962,
+        lng: 24.753574
+    }
+};
 
 
-export default GoogleApiWrapper({
-    //apiKey: (YOUR_GOOGLE_API_KEY_GOES_HERE)
-})(MapContainer)
+export default Map
 
+/*let zoom =12;
+            let lat = 59.436962;
+            let lng = 24.753574;
+            const center = new maps.LatLng(lat, lng);
+            const mapConfig = {
+                center: center,
+                zoom: zoom
+            };*/

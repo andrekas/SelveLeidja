@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import './pesulad.css';
 
 class Pesulad extends Component {
-    ShowDetails(event){
-       var comment =
-       "<Form><Input id='CommentInput' type='text' placeholder='Lisa kommentaar' class='unhidden'/></Form>";
-       var submitInput = "<Input id='SubmitInput' type='submit' value='Submit'/>";
+    static ShowDetails(event){
+      let comment =
+          "<Form><Form.Field><input id='CommentInput' placeholder='Kommenteeri' /></Form.Field></Form>";
+
+      let submitInput = "<Button class='ui button' id='SubmitInput' type='submit'>Submit</Button>";
+
        document.getElementById('DetailsHeading').innerHTML = event.currentTarget.textContent;
        document.getElementById('PriceDiv').innerHTML = "1€ minut";
        document.getElementById('LocationsDiv').innerHTML = "Siin ja seal";
@@ -18,16 +20,16 @@ class Pesulad extends Component {
             <div id="ContainerDiv">
                 <div id="ButtonsDiv">
                     <h2>Pesulad</h2>
-                    <a className='PesulaLink' onClick={this.ShowDetails}>Jazz Selvepesula</a><br/>
-                    <a className='PesulaLink' onClick={this.ShowDetails}>Mündipesula</a><br/>
-                    <a className='PesulaLink' onClick={this.ShowDetails}>SmartWash</a><br/>
-                    <a className='PesulaLink' onClick={this.ShowDetails}>NB Carwash. Self Wash</a><br/>
-                    <a className='PesulaLink' onClick={this.ShowDetails}>Kärcher Selvepesula</a><br/>
-                    <a className='PesulaLink' onClick={this.ShowDetails}>Isepesula 24</a><br/>
-                    <a className='PesulaLink' onClick={this.ShowDetails}>SV pesula</a><br/>
-                    <a className='PesulaLink' onClick={this.ShowDetails}>Aqua Pesulad OÜ</a><br/>
-                    <a className='PesulaLink' onClick={this.ShowDetails}>Wash24</a><br/>
-                    <a className='PesulaLink' onClick={this.ShowDetails}>Linnapesulad</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails}>Jazz Selvepesula</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails}>Mündipesula</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails}>SmartWash</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails}>NB Carwash. Self Wash</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails}>Kärcher Selvepesula</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails}>Isepesula 24</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails}>SV pesula</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails}>Aqua Pesulad OÜ</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails}>Wash24</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails}>Linnapesulad</a><br/>
                 </div>
                 <div id="DetailDiv">
                     <h2 id='DetailsHeading'>Siit leiad infot selvepesulate kohta</h2>
