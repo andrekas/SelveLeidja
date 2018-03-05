@@ -42,7 +42,9 @@ export class Map extends React.Component {
             const center = new maps.LatLng(lat, lng);
             const mapConfig = {
                 center: center,
-                zoom: zoom
+                zoom: zoom,
+                gestureHandling: 'cooperative'
+
             };
 
             this.map = new maps.Map(node, mapConfig);
@@ -72,11 +74,12 @@ Map.propTypes = {
     google: PropTypes.object,
     zoom: PropTypes.number,
     initialCenter: PropTypes.object,
-    onMove: PropTypes.func
+    onMove: PropTypes.func,
+    gestureHandling: PropTypes.object
 };
 Map.defaultProps = {
-    onMove: function() {}, // default prop
     zoom: 12,
+    gestureHandling: 'cooperative',
     initialCenter: {
         lat: 59.436962,
         lng: 24.753574

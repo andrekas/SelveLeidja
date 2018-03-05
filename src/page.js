@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import { Menu, Segment } from 'semantic-ui-react'
 import './App.css';
@@ -6,7 +5,6 @@ import {BrowserRouter, Link, Route} from "react-router-dom";
 import Pesulad from "./pesulad";
 import Container from "./Container";
 import Contact from "./meist";
-
 
 export class MenuExampleInvertedSecondary extends Component {
     state = { activeItem: 'home' };
