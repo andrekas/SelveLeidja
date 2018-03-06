@@ -1,6 +1,6 @@
 import React from "react";
 import './pesulad.css';
-import { List } from 'semantic-ui-react'
+
 class Pesulad extends React.Component {
     static ShowDetails(event){
       let comment =
@@ -9,7 +9,7 @@ class Pesulad extends React.Component {
       let submitInput = "<Button class='ui button' id='SubmitInput' type='submit'>Submit</Button>";
 
        document.getElementById('DetailsHeading').innerHTML = event.currentTarget.textContent;
-       document.getElementById('PriceDiv').innerHTML = "1€ minut";
+       document.getElementById('PriceDiv').innerHTML = "1€ = 100 sekundit";
        document.getElementById('LocationsDiv').innerHTML = "Siin ja seal";
        document.getElementById('CommentDiv').innerHTML = comment + submitInput;
     }

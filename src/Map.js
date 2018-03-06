@@ -58,7 +58,8 @@ export class Map extends React.Component {
     render(){
         const style = {
             width: '98vw',
-            height: '85vh'
+            height: '85vh',
+            margin: 'auto'
         };
         return (
             <div style={style} ref="map" >
@@ -74,8 +75,7 @@ Map.propTypes = {
     google: PropTypes.object,
     zoom: PropTypes.number,
     initialCenter: PropTypes.object,
-    onMove: PropTypes.func,
-    gestureHandling: PropTypes.object
+    onMove: PropTypes.func
 };
 Map.defaultProps = {
     zoom: 12,
@@ -89,11 +89,3 @@ Map.defaultProps = {
 
 export default Map
 
-/*let zoom =12;
-            let lat = 59.436962;
-            let lng = 24.753574;
-            const center = new maps.LatLng(lat, lng);
-            const mapConfig = {
-                center: center,
-                zoom: zoom
-            };*/

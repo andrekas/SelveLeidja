@@ -33,6 +33,7 @@ class Container extends React.Component{
         }
     };
 
+
         render(){
 
         return (
@@ -42,40 +43,50 @@ class Container extends React.Component{
                     <Marker
                         name={'Mündipesula Tondi'}
                         onClick={this.onMarkerClick}
+                        icon={myndipesulaLogo}
                         position={{lat: 59.401440, lng: 24.709393}}
-                        />
+                    />
                     <Marker
                         name={'Mündipesula Rocca'}
                         onClick={this.onMarkerClick}
-                        position={{lat: 59.427837, lng: 24.665210}}/>
+                        icon={myndipesulaLogo}
+                        position={{lat: 59.427837, lng: 24.665210}}
+                    />
                     <Marker
                         name={'Mündipesula'}
                         onClick={this.onMarkerClick}
+                        icon={myndipesulaLogo}
                         position={{lat: 59.448951, lng: 24.886685}}
                     />
                     <Marker
                         name={'Mündipesula'}
                         onClick={this.onMarkerClick}
+                        icon={myndipesulaLogo}
                         position={{lat: 59.445089, lng: 24.882158}}
                     />
                     <Marker
                         name={'Mündipesula'}
                         onClick={this.onMarkerClick}
+                        icon={myndipesulaLogo}
                         position={{lat: 59.447506, lng: 24.692534}}
                     />
                     <Marker
                         name={'Mündipesula'}
                         onClick={this.onMarkerClick}
+                        icon={myndipesulaLogo}
                         position={{lat: 59.462224, lng: 24.905059}}
                     />
                     <Marker
                         name={'Smartwash'}
                         onClick={this.onMarkerClick}
+                        icon={smartwashLogo}
                         position={{lat: 59.421322, lng: 24.694940}}
                     />
                     <Marker
                         name={'Smartwash'}
                         onClick={this.onMarkerClick}
+                        icon={smartwashLogo}
+                        size= 'small'
                         position={{lat: 59.451079, lng: 24.873603}}
                     />
 
@@ -92,11 +103,12 @@ class Container extends React.Component{
     }
 
 }
+let smartwashLogo = require('./logo1.png');
+let myndipesulaLogo = require('./logo2.png');
 
 
 
-
-
-export default GoogleApiWrapper({
-    apiKey: 'AIzaSyANVS2jhTyDoI770WEeor2zVLP5Odr_3Xs'
-})(Container);
+export default (GoogleApiWrapper({
+    apiKey: 'AIzaSyANVS2jhTyDoI770WEeor2zVLP5Odr_3Xs',
+    version: '3'
+})(Container));
