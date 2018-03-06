@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+}
+.Autorid{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+    margin: 2%;
+}
+#Tutvustus{
+    margin-top: 12%;
+    left: 0;
+    right: 0;
+}
