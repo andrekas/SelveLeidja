@@ -33,6 +33,10 @@ body{
 .unhidden{
     display: inline;
 }
+a{
+    padding: 10px;
+    cursor: pointer;
+}
 a:link{
     text-decoration: none;
     color: #686868;

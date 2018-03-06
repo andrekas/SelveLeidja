@@ -1,6 +1,6 @@
 import React from "react";
 import './pesulad.css';
-
+import { List } from 'semantic-ui-react'
 class Pesulad extends React.Component {
     static ShowDetails(event){
       let comment =
@@ -20,17 +20,17 @@ class Pesulad extends React.Component {
             <div id="ContainerDiv">
                 <div id="ButtonsDiv">
                     <h2>Pesulad</h2>
-                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} style={{cursor:'pointer'}}>Jazz Selvepesula</a><br/>
-                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} style={{cursor:'pointer'}}>Mündipesula</a><br/>
-                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} style={{cursor:'pointer'}}>SmartWash</a><br/>
-                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} style={{cursor:'pointer'}}>NB Carwash</a><br/>
-                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} style={{cursor:'pointer'}}>Kärcher Selvepesula</a><br/>
-                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} style={{cursor:'pointer'}}>Isepesula 24</a><br/>
-                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} style={{cursor:'pointer'}}>SV pesula</a><br/>
-                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} style={{cursor:'pointer'}}>Aqua Pesulad OÜ</a><br/>
-                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} style={{cursor:'pointer'}}>Wash24</a><br/>
-                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} style={{cursor:'pointer'}}>Linnapesulad</a><br/>
-                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} style={{cursor:'pointer'}}>Pese Ise</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} >Jazz Selvepesula</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} >Mündipesula</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} >SmartWash</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} >NB Carwash</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} >Kärcher Selvepesula</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} >Isepesula 24</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} >SV pesula</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} >Aqua Pesulad </a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} >Wash24</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} >Linnapesulad</a><br/>
+                    <a className='PesulaLink' onClick={Pesulad.ShowDetails} >Pese Ise</a><br/>
                 </div>
                 <div id="DetailDiv">
                     <h2 id='DetailsHeading'>Siit leiad infot selvepesulate kohta</h2>
