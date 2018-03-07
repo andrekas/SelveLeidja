@@ -24,14 +24,8 @@ body{
     text-align: center;
     margin: 4%;
 }
-#PriceDiv, #LocationsDiv, #CommentDiv{
+#PriceDiv, #LocationsDiv, #CommentElementsDiv{
     margin: 3%;
-}
-.hidden{
-    display: none;
-}
-.unhidden{
-    display: inline;
 }
 a{
     padding: 10px;
