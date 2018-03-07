@@ -89,6 +89,119 @@ class Container extends React.Component{
                         size= 'small'
                         position={{lat: 59.451079, lng: 24.873603}}
                     />
+                    <Marker
+                        name={'Jazz selvepesula'}
+                        onClick={this.onMarkerClick}
+                        icon={jazzLogo}
+                        size= 'small'
+                        position={{lat: 59.427349, lng: 24.659478}}
+                    />
+                    <Marker
+                        name={'Jazz selvepesula'}
+                        onClick={this.onMarkerClick}
+                        icon={jazzLogo}
+                        size= 'small'
+                        position={{lat: 59.450586, lng: 24.861331}}
+                    />
+                    <Marker
+                        name={'NB autopesula'}
+                        onClick={this.onMarkerClick}
+                        //icon={jazzLogo}
+                        size= 'small'
+                        position={{lat: 59.437315, lng: 24.708722}}
+                    />
+                    <Marker
+                        name={'NB autopesula'}
+                        onClick={this.onMarkerClick}
+                        //icon={jazzLogo}
+                        size= 'small'
+                        position={{lat: 59.424892, lng: 24.748162}}
+                    />
+                    <Marker
+                        name={'Wash24'}
+                        onClick={this.onMarkerClick}
+                        //icon={jazzLogo}
+                        size= 'small'
+                        position={{lat: 59.370610, lng: 24.717651}}
+                    />
+                    <Marker
+                        name={'Wash24'}
+                        onClick={this.onMarkerClick}
+                        //icon={jazzLogo}
+                        size= 'small'
+                        position={{lat: 59.431113, lng: 24.810077}}
+                    />
+                    <Marker
+                        name={'Kärcher selvepesula'}
+                        onClick={this.onMarkerClick}
+                        //icon={jazzLogo}
+                        size= 'small'
+                        position={{lat: 59.430076, lng: 24.837253}}
+                    />
+                    <Marker
+                        name={'Kärcher selvepsula'}
+                        onClick={this.onMarkerClick}
+                        //icon={jazzLogo}
+                        size= 'small'
+                        position={{lat: 59.4449732, lng: 24.854986}}
+                    />
+                    <Marker
+                        name={'Isepesula24'}
+                        onClick={this.onMarkerClick}
+                        //icon={jazzLogo}
+                        size= 'small'
+                        position={{lat: 59.415620, lng: 24.683268}}
+                    />
+                    <Marker
+                        name={'Isepesula24'}
+                        onClick={this.onMarkerClick}
+                        //icon={jazzLogo}
+                        size= 'small'
+                        position={{lat: 59.429653, lng: 24.781960}}
+                    />
+                    <Marker
+                        name={'Aqua pesula'}
+                        onClick={this.onMarkerClick}
+                        //icon={jazzLogo}
+                        size= 'small'
+                        position={{lat: 59.406185, lng: 24.643152}}
+                    />
+                    <Marker
+                        name={'Linnapesula'}
+                        onClick={this.onMarkerClick}
+                        //icon={jazzLogo}
+                        size= 'small'
+                        position={{lat: 59.414255, lng: 24.756928}}
+                    />
+                    <Marker
+                        name={'Linnapesula'}
+                        onClick={this.onMarkerClick}
+                        //icon={jazzLogo}
+                        size= 'small'
+                        position={{lat: 59.439662, lng: 24.884763}}
+                    />
+                    <Marker
+                        name={'Pese Ise autopesula'}
+                        onClick={this.onMarkerClick}
+                        //icon={jazzLogo}
+                        size= 'small'
+                        position={{lat: 59.340218, lng: 24.612700}}
+                    />
+                    <Marker
+                        name={'Pese Ise autopesula'}
+                        onClick={this.onMarkerClick}
+                        //icon={jazzLogo}
+                        size= 'small'
+                        position={{lat: 59.507509, lng: 24.825335}}
+                    />
+                    <Marker
+                        name={'EHRLE autopesula'}
+                        onClick={this.onMarkerClick}
+                        //icon={jazzLogo}
+                        size= 'small'
+                        position={{lat: 59.425497, lng: 24.642510}}
+                    />
+
 
                     <InfoWindow
                         marker={this.state.activeMarker}
@@ -105,7 +218,7 @@ class Container extends React.Component{
 }
 let smartwashLogo = require('./logo1.png');
 let myndipesulaLogo = require('./logo2.png');
-
+let jazzLogo = require('./logo3.png');
 
 
 export default (GoogleApiWrapper({
