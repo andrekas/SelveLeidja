@@ -17,7 +17,6 @@ class Pesulad extends React.Component {
         document.getElementById('CommentsDiv').innerHTML = "Kommentaarid siia";
     }
 
-
     render() {
         return ([
             <div id="HeadingDiv"><h2>Pesulate nimekiri ja andmed</h2></div>,

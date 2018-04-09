@@ -9,7 +9,7 @@ class Contact extends Component {
                 <p id="Tutvustus">Antud lehekülg on loodud Tarkvaratehnika aine raames. Rakenduse eesmärgiks on
                                     koondada Tallinna selvepesulad ühte rakendusse. Mõnusat kasutamist!</p>
                 <footer>
-                    <p className="Autorid">Autorid:</p>
+                    <p className="Autorid">Autorid:</p><br/>
                     <p className="Autorid">Andre Laurimaa, Martin Amor, Mark Luik</p>
                 </footer>
             </div>

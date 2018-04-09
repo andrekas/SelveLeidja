@@ -43,7 +43,7 @@ export class Map extends React.Component {
             const mapConfig = {
                 center: center,
                 zoom: zoom,
-                gestureHandling: 'cooperative'
+                gestureHandling: 'greedy'
 
             };
 
@@ -58,7 +58,7 @@ export class Map extends React.Component {
     render() {
         const style = {
             width: '100%',
-            height: '85vh',
+            height: '90vh',
             margin: 'auto'
         };
         return (
@@ -80,7 +80,7 @@ Map.propTypes = {
 };
 Map.defaultProps = {
     zoom: 11,
-    gestureHandling: 'cooperative',
+    gestureHandling: 'greedy',
     initialCenter: {
         lat: 59.436962,
         lng: 24.753574

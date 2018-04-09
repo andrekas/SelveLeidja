@@ -12,12 +12,11 @@ class Container extends React.Component {
             selectedPlace: {},
         };
 
-
         this.onMarkerClick = this.onMarkerClick.bind(this);
         this.onMapClicked = this.onMapClicked.bind(this);
     }
 
-    onMarkerClick(props, marker, e) {
+    onMarkerClick(props, marker) {
         this.setState({
             selectedPlace: props,
             activeMarker: marker,
@@ -25,7 +24,7 @@ class Container extends React.Component {
         });
     };
 
-    onMapClicked(props) {
+    onMapClicked() {
         if (this.state.showingInfoWindow) {
             this.setState({
                 showingInfoWindow: false,
@@ -33,7 +32,6 @@ class Container extends React.Component {
             })
         }
     };
-
 
     render() {
 
@@ -209,7 +207,6 @@ class Container extends React.Component {
                         size='small'
                         position={{lat: 59.425497, lng: 24.642510}}
                     />
-
 
                     <InfoWindow
                         marker={this.state.activeMarker}
