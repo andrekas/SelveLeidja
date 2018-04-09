@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import {PropTypes} from 'prop-types';
 
 
-
 export class Map extends React.Component {
     renderChildren() {
         const {children} = this.props;
@@ -17,20 +16,21 @@ export class Map extends React.Component {
             });
         })
     }
-    componentDidMount(){
+
+    componentDidMount() {
         this.loadMap();
         this.forceUpdate();
     }
 
-    componentDidUpdate(prevProps, prevState){
-        if(prevProps.google !== this.props.google){
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.google !== this.props.google) {
             console.log('updating props');
             this.loadMap();
         }
     }
 
-    loadMap(){
-        if(this.props && this.props.google){
+    loadMap() {
+        if (this.props && this.props.google) {
             const {google} = this.props;
             const maps = google.maps;
 
@@ -52,17 +52,17 @@ export class Map extends React.Component {
             this.forceUpdate();
             console.log(this.map);
 
-    }
+        }
     }
 
-    render(){
+    render() {
         const style = {
-            width: '98vw',
+            width: '100%',
             height: '85vh',
             margin: 'auto'
         };
         return (
-            <div style={style} ref="map" >
+            <div style={style} ref="map">
                 Loading...
                 {this.renderChildren()}
             </div>
@@ -71,6 +71,7 @@ export class Map extends React.Component {
 
 
 }
+
 Map.propTypes = {
     google: PropTypes.object,
     zoom: PropTypes.number,
@@ -78,7 +79,7 @@ Map.propTypes = {
     onMove: PropTypes.func
 };
 Map.defaultProps = {
-    zoom: 12,
+    zoom: 11,
     gestureHandling: 'cooperative',
     initialCenter: {
         lat: 59.436962,

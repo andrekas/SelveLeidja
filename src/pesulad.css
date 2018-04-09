@@ -1,46 +1,57 @@
-body{
+body {
     background-color: #F3F2F2;
 }
-#ContainerDiv{
-     width: 100%;
-     margin: 0 auto;
+
+#ContainerDiv {
+    width: 100%;
+    margin: 0 auto;
 }
-#DetailDiv, #ButtonsDiv{
+
+#DetailDiv, #ButtonsDiv {
     float: left;
     height: 100%;
 }
-#DetailDiv{
+
+#DetailDiv {
     width: 75%;
     text-align: center;
     height: 90%;
 }
-#ButtonsDiv{
+
+#ButtonsDiv {
     width: 25%;
     text-align: center;
     height: 90%;
     border-right: 2px solid black;
 }
-#HeadingDiv{
+
+#HeadingDiv {
     text-align: center;
     margin: 4%;
 }
-#PriceDiv, #LocationsDiv, #CommentElementsDiv{
+
+#PriceDiv, #LocationsDiv, #CommentElementsDiv {
     margin: 3%;
 }
-a{
+
+a {
     padding: 10px;
     cursor: pointer;
 }
-a:link{
+
+a:link {
     text-decoration: none;
     color: #686868;
 }
-a:visited{
+
+a:visited {
     color: #ABABAB;
 }
-a:hover{
+
+a:hover {
     color: #F97979;
 }
-#CommentInput{
+
+#CommentInput {
     width: 20%;
 }

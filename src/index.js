@@ -7,7 +7,7 @@ import registerServiceWorker from './registerServiceWorker';
 import "./index.css";
 
 
-ReactDOM.render(<MenuExampleInvertedSecondary />, document.getElementById('root'));
+ReactDOM.render(<MenuExampleInvertedSecondary/>, document.getElementById('root'));
 
 
 registerServiceWorker();
