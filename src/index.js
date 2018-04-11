@@ -8,7 +8,5 @@ import "./index.css";
 
 
 ReactDOM.render(<MenuExampleInvertedSecondary/>, document.getElementById('root'));
-
-
 registerServiceWorker();
 
