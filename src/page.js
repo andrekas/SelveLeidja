@@ -32,7 +32,7 @@ export class MenuExampleInvertedSecondary extends Component {
                             </Menu.Menu>
                         </Menu>
                     </Segment>
-                    <div className="content">
+                    <div className="content" key={"pages"}>
                         <Route exact path="/" component={Container}/>
                         <Route path="/pesulad" component={Pesulad}/>
                         <Route path="/meist" component={Contact}/>

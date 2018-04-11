@@ -55,3 +55,7 @@ a:hover {
 #CommentInput {
     width: 20%;
 }
+#comments{
+    text-align: left;
+    padding: 10px;
+}
