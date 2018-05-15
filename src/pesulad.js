@@ -8,7 +8,6 @@ class Pesulad extends React.Component {
             ReactDOM.render(React.createElement(Info, null), document.getElementById('InfoDiv'));
             ReactDOM.render(React.createElement(Form, null), document.getElementById('CommentElementsDiv'));
             ReactDOM.render(React.createElement(Comments, null), document.getElementById('CommentsDiv'));
-
         }
     render() {
         return ([
@@ -47,7 +46,6 @@ class Pesulad extends React.Component {
 export default Pesulad;
 
 class Info extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {info: [], isLoading: false, error: null,};
@@ -68,7 +66,7 @@ class Info extends React.Component {
             .catch(error => this.setState({ error, isLoading: false }));
     }
     render() {
-        const { info, isLoading, error } = this.state;
+        const {info, isLoading, error } = this.state;
 
         if (error) {
             return <p>{error.message}</p>;
@@ -157,7 +155,7 @@ class Form extends React.Component {
             <div id="addComment">
                 <form onSubmit={this.handleSubmit}>
                     <input ref={(ref) => {this.content = ref}} placeholder="Kommentaar" type="textarea" name="content"/><br />
-                    <button type="Submit">Saada</button>
+                    <button onClick="window.location.reload()" type="Submit">Saada</button>
                 </form>
                 ​
             </div>);

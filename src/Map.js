@@ -44,7 +44,6 @@ export class Map extends React.Component {
                 center: center,
                 zoom: zoom,
                 gestureHandling: 'greedy'
-
             };
 
             this.map = new maps.Map(node, mapConfig);
