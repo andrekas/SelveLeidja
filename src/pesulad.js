@@ -8,6 +8,7 @@ class Pesulad extends React.Component {
             ReactDOM.render(React.createElement(Info, null), document.getElementById('InfoDiv'));
             ReactDOM.render(React.createElement(Form, null), document.getElementById('CommentElementsDiv'));
             ReactDOM.render(React.createElement(Comments, null), document.getElementById('CommentsDiv'));
+            console.log(event.currentTarget.getAttribute("id"));
         }
     render() {
         return ([
@@ -54,7 +55,7 @@ class Info extends React.Component {
     componentDidMount() {
         this.setState({info: [], isLoading: true});
 
-        fetch('http://localhost:8080/info')
+        fetch('http://localhost:8080/info/')
             .then(response => {
                 if (response.ok) {
                     return response.json();
@@ -148,7 +149,6 @@ class Form extends React.Component {
             body: JSON.stringify({"content": this.content.value,})
         });
         window.location.reload();
-
     };
 
     render () {
