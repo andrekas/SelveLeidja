@@ -4,11 +4,11 @@ import * as ReactDOM from "react-dom";
 
 class Pesulad extends React.Component {
         static ShowDetails(event) {
+            console.log(event.currentTarget.getAttribute("id"));
             document.getElementById('DetailsHeading').innerHTML = event.currentTarget.textContent;
             ReactDOM.render(React.createElement(Info, null), document.getElementById('InfoDiv'));
             ReactDOM.render(React.createElement(Form, null), document.getElementById('CommentElementsDiv'));
             ReactDOM.render(React.createElement(Comments, null), document.getElementById('CommentsDiv'));
-            console.log(event.currentTarget.getAttribute("id"));
         }
     render() {
         return ([
