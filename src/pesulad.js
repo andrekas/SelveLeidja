@@ -4,13 +4,10 @@ import * as ReactDOM from "react-dom";
 
 class Pesulad extends React.Component {
         static ShowDetails(event) {
-
-
-        document.getElementById('DetailsHeading').innerHTML = event.currentTarget.textContent;
-        document.getElementById('PriceDiv').innerHTML = "1€ = 100 sekundit";
-        document.getElementById('LocationsDiv').innerHTML = "Siin ja seal";
-        ReactDOM.render(React.createElement(Form, null), document.getElementById('CommentElementsDiv'));
-        ReactDOM.render(React.createElement(Comments, null), document.getElementById('CommentsDiv'));
+            document.getElementById('DetailsHeading').innerHTML = event.currentTarget.textContent;
+            ReactDOM.render(React.createElement(Info, null), document.getElementById('InfoDiv'));
+            ReactDOM.render(React.createElement(Form, null), document.getElementById('CommentElementsDiv'));
+            ReactDOM.render(React.createElement(Comments, null), document.getElementById('CommentsDiv'));
 
         }
     render() {
@@ -33,10 +30,7 @@ class Pesulad extends React.Component {
                 </div>
                 <div id="DetailDiv">
                     <h2 id='DetailsHeading'>Siit leiad infot selvepesulate kohta</h2>
-                    <div id="PriceDiv">
-
-                    </div>
-                    <div id="LocationsDiv">
+                    <div id="InfoDiv">
 
                     </div>
                     <div id="CommentElementsDiv">
@@ -51,6 +45,52 @@ class Pesulad extends React.Component {
     }
 }
 export default Pesulad;
+
+class Info extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {info: [], isLoading: false, error: null,};
+    }
+
+    componentDidMount() {
+        this.setState({info: [], isLoading: true});
+
+        fetch('http://localhost:8080/info')
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Something went wrong ...');
+                }
+            })
+            .then(data => {console.log(data); this.setState({info: data , isLoading: false })})
+            .catch(error => this.setState({ error, isLoading: false }));
+    }
+    render() {
+        const { info, isLoading, error } = this.state;
+
+        if (error) {
+            return <p>{error.message}</p>;
+        }
+
+        if (isLoading) {
+            return <p>Loading...</p>;
+        }
+
+        return (
+            <div>
+                {info.map((pesulad_info) =>
+                    <div key={pesulad_info.id}>
+                        <span id="info">{pesulad_info.address}</span> <br/>
+                        <span>  </span> <br/>
+                        <span id="info">{pesulad_info.hind}</span>
+                    </div>
+                )}
+            </div>
+        );
+    }
+}
 
 class Comments extends React.Component {
 
