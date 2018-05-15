@@ -34,7 +34,7 @@ export class MenuExampleInvertedSecondary extends Component {
                     </Segment>
                     <div className="content" key={"pages"}>
                         <Route exact path="/" component={Container}/>
-                        <Route path="/pesulad" component={Pesulad}/>
+                        <Route path="/pesulad" component={Pesulad} />
                         <Route path="/meist" component={Contact}/>
                     </div>
                 </div>

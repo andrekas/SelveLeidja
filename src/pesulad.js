@@ -147,6 +147,7 @@ class Form extends React.Component {
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({"content": this.content.value,})
         });
+        window.location.reload();
 
     };
 
@@ -155,7 +156,7 @@ class Form extends React.Component {
             <div id="addComment">
                 <form onSubmit={this.handleSubmit}>
                     <input ref={(ref) => {this.content = ref}} placeholder="Kommentaar" type="textarea" name="content"/><br />
-                    <button onClick="window.location.reload()" type="Submit">Saada</button>
+                    <button type="Submit">Saada</button>
                 </form>
                 ​
             </div>);
