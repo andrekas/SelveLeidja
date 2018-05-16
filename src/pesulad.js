@@ -5,6 +5,7 @@ import * as ReactDOM from "react-dom";
 class Pesulad extends React.Component {
         static ShowDetails(event) {
             console.log(event.currentTarget.getAttribute("id"));
+            window['selectedID'] = event.currentTarget.getAttribute('id');
             document.getElementById('DetailsHeading').innerHTML = event.currentTarget.textContent;
             ReactDOM.render(React.createElement(Info, null), document.getElementById('InfoDiv'));
             ReactDOM.render(React.createElement(Form, null), document.getElementById('CommentElementsDiv'));
@@ -55,7 +56,7 @@ class Info extends React.Component {
     componentDidMount() {
         this.setState({info: [], isLoading: true});
 
-        fetch('http://localhost:8080/info/')
+        fetch('http://localhost:8080/info')
             .then(response => {
                 if (response.ok) {
                     return response.json();
@@ -77,17 +78,17 @@ class Info extends React.Component {
             return <p>Loading...</p>;
         }
 
-        return (
-            <div>
-                {info.map((pesulad_info) =>
-                    <div key={pesulad_info.id}>
-                        <span id="info">{pesulad_info.address}</span> <br/>
-                        <span>  </span> <br/>
-                        <span id="info">{pesulad_info.hind}</span>
-                    </div>
-                )}
-            </div>
-        );
+        return <div>
+            {info.filter(x => {
+                return x.id + '' === window['selectedID']
+            }).map(pesulad_info =>
+                <div key={pesulad_info.id}>
+                    <span id="info">{pesulad_info.address}</span> <br/>
+                    <span>  </span> <br/>
+                    <span id="info">{pesulad_info.hind}</span> <br/>
+                </div>
+            )}
+        </div>;
     }
 }
 
@@ -131,7 +132,6 @@ class Comments extends React.Component {
                             <span id="comments">{comment.content}</span>
                         </div>
                     )}
-
                 </div>
         );
     }
